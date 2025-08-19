@@ -6,14 +6,7 @@ public class Employee {
     private int employeeId;
     private double salary;
     protected String department;
-    
-    public Employee() {
-        this.name = "";
-        this.employeeId = 0;
-        this.salary = 0.0;
-        this.department = "";
     }
-    
     public Employee(String name, int employeeId, double salary, String department) {
         this.name = name;
         this.employeeId = employeeId;
