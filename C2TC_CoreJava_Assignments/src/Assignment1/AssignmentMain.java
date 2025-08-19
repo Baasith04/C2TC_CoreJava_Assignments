@@ -22,9 +22,6 @@ public class AssignmentMain {
         Developer d2 = new Developer("Nivetha", 2002, 72000.0, "Engineering", 
                                            "Python", 3);
 
-        Developer d3 = new Developer("Kokila", 2003, 80000.0, "Engineering", 
-                                           "JavaScript", 7);
-
         System.out.println("--- All Managers ---");
         Manager[] mn = EmployeeUtilities.getAllManagers();
         for (int i = 0; i < mn.length; i++) {
@@ -40,5 +37,3 @@ public class AssignmentMain {
         System.out.println();
     }
 }
-
-
