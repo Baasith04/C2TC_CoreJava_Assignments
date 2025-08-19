@@ -52,14 +52,4 @@ public class Employee {
     public void setDepartment(String department) {
         this.department = department;
     }
-    
-    protected double calculateAnnualBonus() {
-        return salary * 0.05; // 5% of salary as base bonus
-    }
-    
-    @Override
-    public String toString() {
-        return String.format("Employee[ID: %d, Name: %s, Department: %s, Salary: $%.2f]", 
-                           employeeId, name, department, salary);
-    }
 }
