@@ -27,5 +27,4 @@ public class Manager extends Employee {
     public void setManagementLevel(String managementLevel) {
         this.managementLevel = managementLevel;
     }
-    }
 }
