@@ -7,9 +7,7 @@ import Assignment1.utilities.EmployeeUtilities;
 
 public class AssignmentMain {
     
-    public static void main(String[] args) {
-        System.out.println("--- Java Packages and Access Modifiers ---\n");
-        
+    public static void main(String[] args) {      
         Manager m1 = new Manager("Mohamed Baasith", 1001, 95000.0, "Engineering", 
                                      8, "Senior");
 
@@ -37,3 +35,4 @@ public class AssignmentMain {
         System.out.println();
     }
 }
+
