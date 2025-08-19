@@ -5,83 +5,19 @@ import Assignment1.employees.Employee;
 import Assignment1.employees.Manager;
 
 public class EmployeeUtilities {
-   
-    private static Employee[] employees = new Employee[100]; // Fixed size array
-    private static int employeeCount = 0; // Track number of employees
-    
-    static final String UTILITY_VERSION = "1.0";
-    
+    private Employee employees = new Employee; 
+    private int employeeCount = 0; 
     private EmployeeUtilities() {
-        
     }
-    
-    public static boolean addEmployee(Employee employee) {
-        
-        if (employee != null && employee.getEmployeeId() > 0 && employeeCount < employees.length) {
-            employees[employeeCount] = employee;
-            employeeCount++;
-            System.out.println("Employee "+employeeCount+" added Successfully!");
-            return true;
-        }
-        System.out.println("Failed to add Employee!");
-        return false;
-    }
-    
-    public static Employee findEmployeeById(int employeeId) {
-        for (int i = 0; i < employeeCount; i++) {
-            if (employees[i].getEmployeeId() == employeeId) {
-                return employees[i];
-            }
-        }
-        return null;
-    }
-    
     public static double calculateTotalSalaryExpense() {
         double totalSalary = 0.0;
         for (int i = 0; i < employeeCount; i++) {
-            totalSalary += employees[i].getSalary(); // Accessing private attribute via public getter
-        }
+            totalSalary += employees[i].getSalary(); 
         return totalSalary;
     }
     
-    public static Manager[] getAllManagers() {
-        Manager[] managers = new Manager[employeeCount]; // Temporary array
-        int managerCount = 0;
-        
-        for (int i = 0; i < employeeCount; i++) {
-            if (employees[i] instanceof Manager) {
-                managers[managerCount] = (Manager) employees[i];
-                managerCount++;
-            }
-        }
-        
-        Manager[] result = new Manager[managerCount];
-        for (int i = 0; i < managerCount; i++) {
-            result[i] = managers[i];
-        }
-        return result;
-    }
-    
-    public static Developer[] getAllDevelopers() {
-        Developer[] developers = new Developer[employeeCount]; 
-        int developerCount = 0;
-        
-        for (int i = 0; i < employeeCount; i++) {
-            if (employees[i] instanceof Developer) {
-                developers[developerCount] = (Developer) employees[i];
-                developerCount++;
-            }
-        }
-        
-        Developer[] result = new Developer[developerCount];
-        for (int i = 0; i < developerCount; i++) {
-            result[i] = developers[i];
-        }
-        return result;
-    }
-    
     public static void displayAllEmployees() {
-        System.out.println("=== All Employees ===");
+        System.out.println("--- All Employees ---");
         for (int i = 0; i < employeeCount; i++) {
             System.out.println(employees[i].toString()); // Using public toString method
         }
