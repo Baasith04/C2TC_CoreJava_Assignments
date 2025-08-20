@@ -8,10 +8,8 @@ public class Book extends Item {
         this.author = author;
     }
     
-    // Override displayInfo method
-    @Override
     public void displayInfo() {
-        System.out.println("=== BOOK ===");
+        System.out.println("BOOK ");
         super.displayInfo(); // Call parent's displayInfo
         System.out.println("Author: " + author);
         System.out.println();
@@ -21,4 +19,5 @@ public class Book extends Item {
     public String getAuthor() {
         return author;
     }
+
 }
