@@ -26,6 +26,18 @@ public class Library {
             System.out.println("Cannot add item. Library is at maximum capacity (" + maxCapacity + ").");
         }
     }
+    public void showAllItems() {
+        System.out.println("LIBRARY: " + libraryName);
+        System.out.println("Total Items: " + itemCount + "/" + maxCapacity);
+        
+        if (itemCount == 0) {
+            System.out.println("No items in the library.");
+        } else {
+            for (int i = 0; i < itemCount; i++) {
+                items[i].displayInfo(); // Polymorphism in action
+            }
+        }
+    }
     public int getTotalItems() {
         return itemCount;
     }
@@ -39,3 +51,4 @@ public class Library {
     }
 
 }
+
